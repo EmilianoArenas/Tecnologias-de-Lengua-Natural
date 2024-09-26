@@ -1,0 +1,6 @@
+casa,house
+perro,dog
+escuela,house
+tarro,jar
+barro,mud
+carro,car

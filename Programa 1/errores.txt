@@ -1,0 +1,3 @@
+karro,carro,8
+karro,tarro,3
+karro,barro,2
