@@ -4,9 +4,9 @@ class CalculadoraChatbot:
 
     def explicar(self, operacion, a, b, resultado):
         if operacion == "suma":
-            return f"Si tienes {a} cosas y luego consigues {b} más, entonces ahora tienes {resultado} cosas en total."
+            return f"Si tienes {a} cosas en una canasta y luego consigues {b} más, entonces ahora tienes {resultado} cosas en tu canasta en total."
         elif operacion == "resta":
-            return f"Si tienes {a} cosas y le quitas {b}, entonces te quedas con {resultado} cosas."
+            return f"Si tienes {a} cosas en una canasta y le quitas {b}, entonces te quedas con {resultado} en tu canasta de cosas en total."
         elif operacion == "multiplicacion":
             return f"Multiplicar es como sumar muchas veces. Si tienes {a} grupos con {b} cosas en cada grupo, en total tendrás {resultado} cosas."
         elif operacion == "division":
@@ -50,24 +50,19 @@ class CalculadoraChatbot:
 
     def iniciar(self):
         print("Hola! Soy tu calculadora inteligente. Vamos a aprender matemáticas juntos.")
-        
         while True:
             operacion = input("¿Qué operación deseas hacer? (suma, resta, multiplicacion, division) o escribe 'salir' para terminar: ").lower()
             if operacion == "salir":
                 print("Gracias por jugar conmigo! ¡Hasta pronto!")
                 break
-
             try:
                 a = float(input("Introduce el primer número (a): "))
                 b = float(input("Introduce el segundo número (b): "))
             except ValueError:
                 print("Ups, parece que eso no es un número. Vamos a intentarlo otra vez.")
                 continue
-
             resultado = self.resolver(operacion, a, b)
             print(resultado)
             print("-" * 40)
-
-# Ejecutar el chatbot
 calculadora = CalculadoraChatbot()
 calculadora.iniciar()
